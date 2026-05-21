@@ -1,4 +1,4 @@
-name: My First Workflow
+name: Checkout Demo
 
 on: push
 
@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello Varsha"
+      - uses: actions/checkout@v4
+
+      - name: List Files
+        run: ls
